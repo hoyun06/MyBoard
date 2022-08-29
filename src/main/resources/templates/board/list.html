@@ -23,13 +23,13 @@
           <tbody>
             <tr th:each = "article : ${board}">
               <td th:text = "${article.id}"></td>
-              <td th:text = "${article.title}"></td>
+              <td><a href="#" th:href = "@{/board/form(id = ${article.id})}" th:text = "${article.title}"></a></td>
               <td th:text = "hoppak"></td>
             </tr>
           </tbody>
         </table>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary" type="button">쓰기</button>
+        <div class="text-right">
+          <a class="btn btn-primary" type="button" th:href = "@{/board/form}">쓰기</a>
         </div>
       </div>
     
